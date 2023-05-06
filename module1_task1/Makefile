@@ -1,5 +1,5 @@
 build:
-	hugo > hugo.log 2>&1
+	hugo > /dev/null 2>&1
 
 clean:
 	rm -rf dist/*
