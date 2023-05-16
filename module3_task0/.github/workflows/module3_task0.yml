@@ -1,0 +1,11 @@
+name: module3_task0
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  run-checks:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: make help
