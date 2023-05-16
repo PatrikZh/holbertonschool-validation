@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
-      - run: make help
+      - run: make help -C module3_task0
