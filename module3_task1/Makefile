@@ -41,7 +41,7 @@ lint:	## Lint go lang code
 
 check:	## Lint markdonw source, check dead links
 	markdownlint content/**/*.md
-	find content -name \*.md -print0 | xargs -0 -n1 markdown-link-check
+	find content -name \*.md -print0 | -0 -n1 markdown-link-check
 
 validate:	## Validate the file dist/index.html using the command line Holberton’s W3C Validator.
 	python3 /opt/W3C-Validator/w3c_validator.py ./dist/index.html || true
