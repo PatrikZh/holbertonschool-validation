@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: sudo ./module3_task1/setup.sh
+      - run: npm install -g markdownlint-cli
       - run: make test -C module3_task1
       - run: make build -C module3_task1
       - run: make run -C module3_task1
