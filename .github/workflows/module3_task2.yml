@@ -15,6 +15,11 @@ jobs:
       - run: sudo ./module3_task2/setup.sh
       - run: make test -C module3_task2
       - run: make build -C module3_task2
+      - run: make package -C module3_task2
       - run: make run -C module3_task2
       - run: make stop -C module3_task2
       - run: make clean -C module3_task2
+      - uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: module3_task2/awesome-website.zip
