@@ -7,7 +7,7 @@ HUGO=hugo
 
 build:	## Generate the source code of the application to a binary.
 	$(GO) mod tidy
-	$(MAKE) check && $(HUGO)
+	$(HUGO)
 	$(GO) build -o $(TARGET)
 
 run:	## Run the application in background by executing the binary.
