@@ -1,7 +1,6 @@
----
 name: module3_task2
 run-name: module3_task2
-on:    # yamllint disable-line rule:truthy
+on:
   push:
     branches:
       - main
@@ -19,7 +18,10 @@ jobs:
       - run: make run -C module3_task2
       - run: make stop -C module3_task2
       - run: make clean -C module3_task2
+      - run: npm install
+      - run: npm install -g markdownlint-cli
       - uses: actions/upload-artifact@v3
         with:
           name: package
           path: module3_task2/awesome-website.zip
+
