@@ -37,6 +37,9 @@ unit-tests: ## Run unit tests
 integration-tests: ## Run integration tests
 	go test -v -coverprofile=$(COVERAGE)-integrations.out
 
+lint:	## Lint go lang code
+	markdownlint README.md DEPLOY.md
+
 check:	## Lint markdonw source, check dead links
 	markdownlint content/**/*.md
 	find content -name \*.md -print0 | xargs -0 -n1 markdown-link-check
