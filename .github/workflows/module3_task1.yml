@@ -1,7 +1,7 @@
 ---
 name: module3_task1
 run-name: module3_task1
-on:
+on:    # yamllint disable-line rule:truthy
   push:
     branches:
       - main
