@@ -38,6 +38,7 @@ integration-tests: ## Run integration tests
 	go test -v -coverprofile=$(COVERAGE)-integrations.out
 
 lint:	## Lint go lang code
+	@npm install markdownlint-cli
 	./node_modules/.bin/markdownlint README.md DEPLOY.md
 
 check:	## Lint markdonw source, check dead links
