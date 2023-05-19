@@ -1,5 +1,4 @@
 # Build Workflow
-# Prerequisites
 
 ## Lifecycle
 
@@ -46,5 +45,3 @@ The application lifecycle includes several steps:
 - `package`: Zip necessary files.
 
 - `help`: Display help message.
-
-- `Build Workflow`: lalalala.
