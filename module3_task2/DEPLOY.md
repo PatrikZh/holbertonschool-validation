@@ -1,6 +1,6 @@
 # What is the archive and how to unarchive it?
 
---- The archive is named `awesome-website.zip`. Run command `unzip awesome-website.zip` to unarchive it.
+--- Archive named `awesome-website.zip` Command `unzip awesome-website.zip`unarchive
 
 ## What are the commands to start and stop the application?
 
