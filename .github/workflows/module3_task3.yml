@@ -29,11 +29,9 @@ jobs:
           name: package
           path: module3_task2/awesome-website.zip
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: actions/create-release@v1
         with:
           tag_name: 1.0.0
           files: |
-            awesome-website.zip
+            module3_task2/awesome-website.zip
           body: ${{ steps.txt.outputs.body }}
-          permissions:
-          contents: write
