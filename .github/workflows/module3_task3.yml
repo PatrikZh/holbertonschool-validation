@@ -1,6 +1,6 @@
 name: module3_task3
 run-name: module3_task3
-on:     # yamllint disable-line rule:truthy
+on:
   push:
     branches:
       - main
@@ -28,13 +28,11 @@ jobs:
           name: package
           path: module3_task2/awesome-website.zip
       - name: Release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          files: module3_task2/awesome-website.zip
           tag_name: 1.0.0
-          release_name: Release 1.0.0
           body: ${{ steps.txt.outputs.body }}
-          draft: false
-          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
 
