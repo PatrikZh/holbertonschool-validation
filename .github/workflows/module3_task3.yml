@@ -1,3 +1,4 @@
+---
 name: module3_task3
 run-name: module3_task3
 on:
@@ -11,6 +12,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+      - run: |
+          npm install
+          npm install -g markdownlint-cli
       - run: sudo ./module3_task2/setup.sh
       - run: make test -C module3_task3
       - run: make build -C module3_task3
@@ -30,9 +34,10 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: module3_task2/awesome-website.zip
           tag_name: 1.0.0
+          files: |
+            awesome-website.zip
           body: ${{ steps.txt.outputs.body }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+          permissions:
+          contents: write
 
