@@ -1,6 +1,6 @@
 name: module3_task3
 run-name: module3_task3
-on:
+on:     # yamllint disable-line rule:truthy
   push:
     branches:
       - main
@@ -13,9 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      # ... other steps ...
-
       - name: Release
         uses: actions/create-release@v1
         with:
@@ -23,6 +20,8 @@ jobs:
           release_name: Release 1.0.0
           body: ${{ steps.txt.outputs.body }}
           commitish: ${{ github.sha }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.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 }}
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
@@ -31,3 +30,5 @@ jobs:
           asset_path: module3_task2/awesome-website.zip
           asset_name: awesome-website.zip
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.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 }}
