@@ -15,7 +15,7 @@ jobs:
       - run: |
           npm install
           npm install -g markdownlint-cli
-      - run: sudo ./module3_task2/setup.sh
+      - run: sudo ./module3_task3/setup.sh
       - run: make test -C module3_task3
       - run: make build -C module3_task3
       - run: make package -C module3_task3
